@@ -31,7 +31,6 @@ def contains(s: Set, el: Int): Boolean =
 def insert(elem: Int, set: Set): Set =
   x => x == elem || set(x)
 
-
 //Augabe d rek
 def createRangeRek(a: Int, b: Int): Set = {
   if (a > b) createEmptySet()
@@ -43,3 +42,8 @@ def createRange(a: Int, b: Int): Set =
 
 //Aufgabe e
 def union(set1: Set, set2: Set): Set =
+  x=> x== set1(x) || set2(x)
+
+def toList(set:Set,a:Int,b:Int):List[Int] ={
+  x=>
+}
