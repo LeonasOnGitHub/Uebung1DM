@@ -95,3 +95,6 @@ def groupBY2[T,u](l:Iterable[T], groupByFun:T=>u):Map[u, List[T]]={
 }
 l.groupBy(x=>x%2)
 groupBY2(l, (x:Int)=>x % 2)
+
+val l =  List(1,2,3,4,5,6)
+l.reduceLeft((x, y) => x + y)
