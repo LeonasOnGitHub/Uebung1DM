@@ -50,3 +50,11 @@ val list = List(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
 val groupedMap = list.groupBy(identity)
 
 println(groupedMap)
+
+def getAllWordsWithIndex(l: List[(Int, String)]): List[(Int, String)] = {
+  l.flatMap(x => getWords(x._2).filter(s => s.nonEmpty).map(i => (x._1, i)))
+}
+
+getAllWordsWithIndex(test_list).foldLeft(Map[String, List[Int]]())((a,b) => a.updated(b._2, b._1 :: a.getOrElse(b._2, List())))
+
+inverseIndex.get("test")
