@@ -115,8 +115,7 @@ def caloriesByMeal(l: List[(String, String, List[(String, Int)])]): Map[String, 
 }
 caloriesByMeal(calories)
 
-def caloriesByMeal2(l: List[(String, String, List[(String,
-  Int)])]): Map[String, Int] = {
+def caloriesByMeal2(l: List[(String, String, List[(String, Int)])]): Map[String, Int] = {
   l.flatMap(x => x._3).
     foldLeft(Map(): Map[String, Int])((map, el) => map.updated(el._1,
       map.getOrElse(el._1, 0) + el._2))
